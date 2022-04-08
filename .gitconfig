@@ -1,0 +1,27 @@
+[alias]
+    gui = !sh -c '/usr/local/opt/git/bin/git gui'
+    co = checkout
+    s = stash
+    sp = stash pop
+    p = pull -p --rebase
+    undo = reset --soft HEAD~1
+    rb = "!sh -c \"git rebase -i HEAD~$1\" -"
+    rtag = "!f() { git tag -d \"${@}\" && \
+                              git push --delete origin  \"${@}\" ; \
+                            } ; f";
+[user]
+	name = Logovskii Dmitrii
+	email = d-zaytsev@yandex-team.ru
+	signingkey = 0EC9EA94325D0E23
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[init]
+	templatedir = ~/.git-templates
+
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
