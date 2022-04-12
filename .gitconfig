@@ -10,9 +10,9 @@
                               git push --delete origin  \"${@}\" ; \
                             } ; f";
 [user]
-	name = Logovskii Dmitrii
-	email = d-zaytsev@yandex-team.ru
-	signingkey = 0EC9EA94325D0E23
+	name = <>
+	email = <>
+	signingkey = <>
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
